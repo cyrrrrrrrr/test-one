@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>TVBS Header 模擬</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Noto Sans TC", sans-serif;
+    }
+
+    header {
+      background-color: #2e2e2e;
+      color: white;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 10px 16px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      background-color: #444;
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      color: black;
+      min-width: 160px;
+      display: none;
+      flex-direction: column;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .dropdown a {
+      padding: 10px;
+      text-decoration: none;
+      color: black;
+    }
+
+    .dropdown a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .nav-item:hover .dropdown {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="dropdown">
+        <div class="dropdown-item-with-image">
+          <img src="https://via.placeholder.com/80" alt="新聞圖" />
+          <div>
+            <p class="title">火速追蹤！立法院突發狀況</p>
+            <p class="time">2小時前</p>
+          </div>
+        </div>
+      </div>
+      
+    <div class="nav-container">
+      <div class="logo">TVBS 模擬</div>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#" class="nav-link">即時</a>
+          <div class="dropdown">
+            <a href="#">最新消息</a>
+            <a href="#">直播專區</a>
+            <a href="#">熱門排行</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">政治</a>
+          <div class="dropdown">
+            <a href="#">立法院</a>
+            <a href="#">總統府</a>
+            <a href="#">選舉</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">社會</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">娛樂</a>
+          <div class="dropdown">
+            <a href="#">明星</a>
+            <a href="#">影劇</a>
+            <a href="#">綜藝</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+</body>
+</html>
