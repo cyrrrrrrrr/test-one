@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>TVBS Mega Menu</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: sans-serif;
+      margin: 0;
+    }
+
+    /* Header */
+    .header {
+      background-color: #222;
+      color: white;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-item {
+      position: relative;
+      margin-right: 24px;
+      cursor: pointer;
+    }
+
+    .nav-item:hover .mega-dropdown {
+      display: flex;
+    }
+
+    .nav-bar {
+      display: flex;
+      gap: 20px;
+    }
+
+    /* Mega Dropdown */
+    .mega-dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      color: black;
+      width: 900px;
+      padding: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    .left-menu {
+      width: 180px;
+      margin-right: 20px;
+    }
+
+    .left-menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .left-menu li {
+      padding: 8px 0;
+      cursor: pointer;
+    }
+
+    .left-menu .active {
+      color: red;
+      font-weight: bold;
+    }
+
+    .main-content {
+      width: 320px;
+      margin-right: 20px;
+    }
+
+    .main-content h3 {
+      border-bottom: 2px solid red;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .carousel-title {
+      margin-top: 6px;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .text-list {
+      flex: 1;
+    }
+
+    .text-list ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .text-list li {
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    .more {
+      margin-top: 8px;
+      color: #d00;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="nav-bar">
+      <div class="nav-item">
+        TVBS網路投票
+        <div class="mega-dropdown">
+          <div class="left-menu">
+            <ul>
+              <li class="active">● TVBS網路投票</li>
+              <li>優惠好康情報</li>
+              <li>商業透視</li>
+              <li>生活即時</li>
+            </ul>
+          </div>
+          <div class="main-content">
+            <h3>TVBS網路投票</h3>
+            <div class="carousel">
+              <img src="https://via.placeholder.com/300x160.png?text=輪播圖" alt="主圖" />
+              <div class="carousel-title">《TVBS新聞網》網路投票／川普是否會關稅豁免？</div>
+            </div>
+          </div>
+          <div class="text-list">
+            <ul>
+              <li>《TVBS新聞網》網路投票／是否滿意政府的救市政策與應...</li>
+              <li>TVBS網路投票／言論自由被限縮
